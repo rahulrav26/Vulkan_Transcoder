@@ -1,0 +1,35 @@
+rahulravi26@rahulravi26-GF63-Thin-9SCXR:~/multimedia/vulkan/vulkan_transcoder$ ./build/transcoder sample_videos/Moana.2.2024.2160P.4K.Web.X265.10Bit.Aac5.1-\[Yts.Mx\].mp4 output.mp4
+Vulkan instance created.
+
+--- Finding a Suitable GPU ---
+Found 2 device(s).
+
+[INFO] Checking device: NVIDIA GeForce GTX 1650 with Max-Q Design
+  - Checking for queue families...
+    [PASS] Video Decode Queue Family found at index 3
+    [PASS] Video Encode Queue Family found at index 4
+  - Checking for required device extensions...
+    [Found] VK_KHR_video_queue
+    [Found] VK_KHR_video_decode_queue
+    [Found] VK_KHR_video_decode_h264
+    [Found] VK_KHR_video_encode_queue
+    [Found] VK_KHR_video_encode_h265
+    [Found] VK_KHR_synchronization2
+    [Found] VK_KHR_sampler_ycbcr_conversion
+[INFO] >>> This device IS suitable! <<<
+
+Successfully selected Physical Device: NVIDIA GeForce GTX 1650 with Max-Q Design
+--------------------------------
+
+Logical device and queues created.
+Demuxer: Found 49 bytes of SPS/PPS extradata.
+Demuxer initialized for file: sample_videos/Moana.2.2024.2160P.4K.Web.X265.10Bit.Aac5.1-[Yts.Mx].mp4
+Video Resolution: 1920x1080
+Muxer initialized for file: output.mp4
+Successfully loaded Vulkan video function pointers.
+Validation Error: [ VUID-VkVideoSessionCreateInfoKHR-pStdHeaderVersion-parameter ] | MessageID = 0xcf94a003
+vkCreateVideoSessionKHR(): pCreateInfo->pStdHeaderVersion is NULL.
+The Vulkan spec states: pStdHeaderVersion must be a valid pointer to a valid VkExtensionProperties structure (https://vulkan.lunarg.com/doc/view/1.4.313.0/linux/antora/spec/latest/chapters/videocoding.html#VUID-VkVideoSessionCreateInfoKHR-pStdHeaderVersion-parameter)
+
+Segmentation fault (core dumped)
+

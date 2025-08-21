@@ -1,0 +1,37 @@
+(base) amd@amd:~/vulkan/vulkan_transcoder$ ./build/transcoder sample_videos/Moana.2.2024.2160P.4K.Web.X265.10Bit.Aac5.1-\[Yts.Mx\].mp4  output.mp4
+Vulkan instance created.
+
+--- Finding a Suitable GPU ---
+Found 2 device(s).
+
+[INFO] Checking device: AMD Radeon Graphics (RADV PHOENIX)
+  - Checking for queue families...
+    [FAIL] Video Decode Queue Family NOT found.
+    [FAIL] Video Encode Queue Family NOT found.
+  - Checking for required device extensions...
+    [Missing] VK_KHR_video_queue
+    [Missing] VK_KHR_video_decode_queue
+    [Missing] VK_KHR_video_decode_h264
+    [Missing] VK_KHR_video_encode_queue
+    [Missing] VK_KHR_video_encode_h265
+    [Found] VK_KHR_synchronization2
+    [Found] VK_KHR_sampler_ycbcr_conversion
+[INFO] >>> This device is NOT suitable. <<<
+
+[INFO] Checking device: llvmpipe (LLVM 19.1.1, 256 bits)
+  - Checking for queue families...
+    [FAIL] Video Decode Queue Family NOT found.
+    [FAIL] Video Encode Queue Family NOT found.
+  - Checking for required device extensions...
+    [Missing] VK_KHR_video_queue
+    [Missing] VK_KHR_video_decode_queue
+    [Missing] VK_KHR_video_decode_h264
+    [Missing] VK_KHR_video_encode_queue
+    [Missing] VK_KHR_video_encode_h265
+    [Found] VK_KHR_synchronization2
+    [Found] VK_KHR_sampler_ycbcr_conversion
+[INFO] >>> This device is NOT suitable. <<<
+
+--------------------------------
+An error occurred: Failed to find a suitable GPU!
+
